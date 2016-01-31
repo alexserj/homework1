@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Friends For Usrs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Friends</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @friends_for_usrs.each do |friends_for_usr| %>
+      <tr>
+        <td><%= friends_for_usr.friends %></td>
+        <td><%= link_to 'Show', friends_for_usr %></td>
+        <td><%= link_to 'Edit', edit_friends_for_usr_path(friends_for_usr) %></td>
+        <td><%= link_to 'Destroy', friends_for_usr, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Friends for usr', new_friends_for_usr_path %>

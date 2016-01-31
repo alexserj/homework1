@@ -1,0 +1,2 @@
+module FriendsForUsrsHelper
+end
